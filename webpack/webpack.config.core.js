@@ -1,6 +1,7 @@
 const path = require('path');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const ESLintWebpackPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -10,7 +11,13 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     filename: '[name].bundle.js',
   },
-  plugins: [new FriendlyErrorsWebpackPlugin(), new ForkTsCheckerWebpackPlugin()],
+  plugins: [
+    new FriendlyErrorsWebpackPlugin(),
+    new ForkTsCheckerWebpackPlugin(),
+    new ESLintWebpackPlugin({
+      extensions: ['js', 'jsx', 'ts', 'tsx'],
+    }),
+  ],
   module: {
     rules: [
       {
