@@ -1,4 +1,5 @@
 const path = require('path');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -8,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     filename: '[name].bundle.js',
   },
+  plugins: [new FriendlyErrorsWebpackPlugin()],
   module: {
     rules: [
       {
