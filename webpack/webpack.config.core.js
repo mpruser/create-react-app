@@ -1,5 +1,6 @@
 const path = require('path');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -9,7 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, '../dist'),
     filename: '[name].bundle.js',
   },
-  plugins: [new FriendlyErrorsWebpackPlugin()],
+  plugins: [new FriendlyErrorsWebpackPlugin(), new ForkTsCheckerWebpackPlugin()],
   module: {
     rules: [
       {
@@ -23,7 +24,13 @@ module.exports = {
       {
         test: /\.(jsx?|tsx?)$/,
         exclude: /node_modules/,
-        use: [{ loader: 'babel-loader' }, { loader: 'ts-loader' }],
+        use: [
+          { loader: 'babel-loader' },
+          {
+            loader: 'ts-loader',
+            options: { transpileOnly: true },
+          },
+        ],
       },
     ],
   },

@@ -65,7 +65,8 @@
     // "emitDecoratorMetadata": true,               /* Enables experimental support for emitting type metadata for decorators. */
 
     /* Advanced Options */
-    "skipLibCheck": true,                           /* Skip type checking of declaration files. */
-    "forceConsistentCasingInFileNames": true        /* Disallow inconsistently-cased references to the same file. */
+    "skipLibCheck": true,                           /* 모든 선언 파일(*.d.ts)의 타입 검사를 건너뜁니다. */
+    "forceConsistentCasingInFileNames": true,       /* Disallow inconsistently-cased references to the same file. */
+    "skipDefaultLibCheck": true,                    /* 기본 라이브러리 선언 파일의 타입 검사를 건너뜁니다. */
   }
 }
