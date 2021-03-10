@@ -43,8 +43,9 @@
     // 해당 확장자 모듈 가져오도록 등록
     "import/resolver": {
       "node": {
+        "moduleDirectory": ["node_modules", "src/"],
         "extensions": [".js", ".jsx", ".ts", ".tsx"],
-        "moduleDirectory": ["node_modules", "src/"]
+        "paths": ["./"]
       }
     }
   }

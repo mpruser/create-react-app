@@ -10,7 +10,12 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: '[name].[contenthash].js',
+    filename: '[name].[contenthash8].js',
+  },
+  resolve: {
+    modules: ['node_modules'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js'],
+    alias: { src: path.resolve(__dirname, 'src/') },
   },
   plugins: [
     new FriendlyErrorsWebpackPlugin(),
