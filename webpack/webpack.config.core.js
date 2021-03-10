@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: { 
+  entry: {
     index: path.resolve(__dirname, '../src/index.tsx'),
   },
   output: {
