@@ -39,3 +39,43 @@ $ rm -rf yarn.look
 ```shell
 $ npm ci
 ```
+
+## Documents
+
+- webpack:
+  https://webpack.js.org/concepts/
+- webpack-dev-server:
+  https://webpack.js.org/configuration/dev-server/
+- typescript(tsconfig)
+  https://typescript-kr.github.io/pages/compiler-options.html
+  https://www.typescriptlang.org/tsconfig
+- eslint(eslintrc)
+  https://eslint.org/docs/2.0.0/user-guide/configuring
+- babel(babel.config)
+  https://babeljs.io/docs/en/configuration
+- @babel/preset-env
+  https://babeljs.io/docs/en/babel-preset-env
+
+#### webpack plugins
+
+- clean-webpack-plugin:
+  https://github.com/johnagan/clean-webpack-plugin#options-and-defaults-optional
+- eslint-webpack-plugin:
+  https://github.com/webpack-contrib/eslint-webpack-plugin#options
+- fork-ts-checker-webpack-plugin:
+  https://github.com/TypeStrong/fork-ts-checker-webpack-plugin#options
+- friendly-errors-webpack-plugin:
+  https://github.com/geowarin/friendly-errors-webpack-plugin#options
+- html-webpack-plugin:
+  https://github.com/jantimon/html-webpack-plugin#options
+- terser-webpack-plugin:
+  https://github.com/webpack-contrib/terser-webpack-plugin#options
+
+#### webpack loaders
+
+- file-loader
+  https://github.com/webpack-contrib/file-loader#options
+- url-loader
+  https://github.com/webpack-contrib/url-loader#options
+- ts-loader
+  https://github.com/TypeStrong/ts-loader#configuration
