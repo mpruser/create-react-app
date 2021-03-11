@@ -46,6 +46,9 @@
         "moduleDirectory": ["node_modules", "src/"],
         "extensions": [".js", ".jsx", ".ts", ".tsx"],
         "paths": ["./"]
+      },
+      "webpack": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   }

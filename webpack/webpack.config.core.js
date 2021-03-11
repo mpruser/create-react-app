@@ -15,7 +15,7 @@ module.exports = {
   resolve: {
     modules: ['node_modules'],
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
-    alias: { src: path.resolve(__dirname, 'src/') },
+    alias: { '@': path.resolve(__dirname, '../src/') },
   },
   plugins: [
     new FriendlyErrorsWebpackPlugin(),
