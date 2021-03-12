@@ -16,6 +16,11 @@
   "plugins": ["react", "@typescript-eslint"],
   "ignorePatterns": ["dist/", "node_modules/", "public/", "@types/"],
   "rules": {
+    // enum에 발생하는 린트오류
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     // 정의되기 전에 사용되도록 허용 ('React' was used before it was defined)
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
