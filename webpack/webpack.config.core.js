@@ -1,7 +1,6 @@
 const path = require('path');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const ESLintWebpackPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -19,9 +18,18 @@ module.exports = {
   },
   plugins: [
     new FriendlyErrorsWebpackPlugin(),
-    new ForkTsCheckerWebpackPlugin(),
-    new ESLintWebpackPlugin({
-      extensions: ['js', 'jsx', 'ts', 'tsx'],
+    new ForkTsCheckerWebpackPlugin({
+      eslint: {
+        enabled: true,
+        files: './src/**/*',
+      },
+      typescript: {
+        diagnosticOptions: {
+          semantic: true,
+          syntactic: true,
+        },
+        mode: 'write-references',
+      },
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../public/index.html'),
@@ -40,13 +48,7 @@ module.exports = {
       {
         test: /\.(jsx?|tsx?)$/,
         exclude: /node_modules/,
-        use: [
-          { loader: 'babel-loader' },
-          {
-            loader: 'ts-loader',
-            options: { transpileOnly: true },
-          },
-        ],
+        loader: 'babel-loader',
       },
     ],
   },
