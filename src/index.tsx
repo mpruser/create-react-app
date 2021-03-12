@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
-import App1 from '@/App1';
-import App2 from '@/App2';
+import store from '@/store';
 
 ReactDOM.render((
-  <>
-    <App1 text="Hello World Tsx" />
-    <App2 text="Hello World Jsx" />
-  </>
+  <Provider store={store()}>
+    <React.StrictMode>
+      <h1>Hello World</h1>
+    </React.StrictMode>
+  </Provider>
 ), document.getElementById('root'));
