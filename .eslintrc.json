@@ -23,6 +23,8 @@
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     // typescript를 사용하기 때문에 react props type체크 린트 off
     "react/prop-types": 0,
+    // 코드 스타일을 위한 린트
+    "object-curly-newline": 0,
     // airbnb ESLint 구성의 문제를 해결하기 위함
     "import/extensions": [
       "error",
