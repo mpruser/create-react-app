@@ -50,6 +50,7 @@
     "paths": {
       // webpack.resolve.alias추가시 동일한 규칙으로 추가 .e.g "assets/*": ["src/assets/*"],
       "@/*": ["src/*"],
+      "components/*": ["src/components/*"]
      },
     // "rootDirs": [],                              /* List of root folders whose combined content represents the structure of the project at runtime. */
     // "typeRoots": [],                             /* List of folders to include type definitions from. */
